@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>browser-amd-editor</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./asset/css/reset.css" />
+    <link rel="stylesheet" href="./asset/css/style.css" />
+    <title>MyCodeEditor</title>
   </head>
   <body>
-    <div
-      id="container"
-      style="width: 800px; height: 600px; border: 1px solid grey"
-    ></div>
-    <button id="run_button">RUN</button>
+    <main>
+      <section id="container"></section>
+      <section class="button_wrapper">
+        <button id="run_button" class="execute_button">RUN</button>
+        <button id="clear_button" class="execute_button">CLEAR</button>
+        <button id="restore_button" class="execute_button">RESTORE</button>
+      </section>
+      <section id="console"></section>
+    </main>
 
-    <!-- OR ANY OTHER AMD LOADER HERE INSTEAD OF loader.js -->
-    <script src="../node_modules/monaco-editor/min/vs/loader.js"></script>
-    <script src="./script.js"></script>
+    <script src="./node_modules/monaco-editor/min/vs/loader.js"></script>
+    <script src="./asset/js/script.js"></script>
   </body>
 </html>
