@@ -1,19 +1,18 @@
-require.config({ paths: { vs: "./node_modules/monaco-editor/min/vs" } });
+import * as monaco from "monaco-editor";
+// or import * as monaco from 'monaco-editor/esm/vs/editor/editor.api';
+// if shipping only a subset of the features & languages is desired
 
 const editorContainer = document.getElementById("container");
 const consoleSection = document.getElementById("console");
 
-let editor = "";
 let prevEditorValue = 'console.log("Hello world!");\n';
-require(["vs/editor/editor.main"], function () {
-  editor = monaco.editor.create(editorContainer, {
-    value: [prevEditorValue].join("\n"),
-    language: "javascript",
-    theme: "vs-dark",
-  });
-  window.addEventListener("resize", () => {
-    editor.layout();
-  });
+const editor = monaco.editor.create(editorContainer, {
+  value: prevEditorValue,
+  language: "javascript",
+  theme: "vs-dark",
+});
+window.addEventListener("resize", () => {
+  editor.layout();
 });
 
 // save changes

@@ -1,5 +1,29 @@
 {
+  "name": "my_code_editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm ci && npx webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigdragon0610/my_code_editor.git"
+  },
+  "author": "bigdragon0610",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bigdragon0610/my_code_editor/issues"
+  },
+  "homepage": "https://github.com/bigdragon0610/my_code_editor#readme",
   "dependencies": {
-    "monaco-editor": "^0.34.0"
+    "css-loader": "^6.7.1",
+    "monaco-editor-webpack-plugin": "^7.0.1",
+    "style-loader": "^3.3.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   }
 }
